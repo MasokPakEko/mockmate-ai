@@ -1,7 +1,7 @@
 function generateQuestions() {
 
   const vacancy =
-    document.getElementById("vacancy").value.toLowerCase();
+    document.getElementById("jobInput").value.toLowerCase();
 
   let questions = [];
 
@@ -119,7 +119,7 @@ function generateQuestions() {
   });
 
   output += `</ul>`;
-
-  document.getElementById("questions").innerHTML = output;
-
+  const questionBox = document.getElementById("questions");
+  questionBox.innerHTML = output;
+  questionBox.style.display = "block";
 }

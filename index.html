@@ -3,35 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MockMate AI</title>
+  <title>MockmatE AI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>MockmatE AI</h1>
-  <h2>You've got a friend in ME.</h2>
+  <div class="container">
 
-  <p>
-    Paste your job vacancy below:
-  </p>
+    <h1>MockmatE AI</h1>
+    <h2>You've got a friend in ME.</h2>
 
-  <textarea
-    id="vacancy"
-    rows="10"
-    cols="60"
-    placeholder="Paste job vacancy here..."
-  ></textarea>
+    <textarea id="jobInput", placeholder="Paste your job vacancy here."></textarea>
 
-  <br><br>
+    <button onclick="generateQuestions()">
+      Generate Questions
+    </button>
 
-  <button onclick="generateQuestions()">
-    Generate Interview Questions
-  </button>
+    <div id="questions"></div>
 
-  <div id="questions"></div>
+  </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
