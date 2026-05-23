@@ -1,18 +1,18 @@
-# MockMate AI
+# MockmatE AI
 
-MockMate AI is an AI-powered interview simulator designed to help job seekers practice interviews based on real job vacancies.
+MockmatE AI is an interview simulation web application designed to help first-time job applicants prepare for interviews confidently.
 
-## Mission
-Help first-time applicants and career switchers feel more prepared and confident before real interviews.
+## Current Features
+- Job vacancy input
+- Dynamic interview question generation
+- Category-based logic
+- Responsive frontend UI
 
-## MVP Features
-- Vacancy-based mock interviews
-- AI-generated interview questions
-- Answer evaluation and feedback
-- Text-based interview simulation
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- GitHub
 
-## Future Features
-- Voice interviews
-- AI recruiter personalities
-- Confidence analysis
-- Interview performance tracking
+## Current Development Phase
+Frontend Foundations
