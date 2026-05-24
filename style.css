@@ -7,7 +7,7 @@ body {
 .container {
   max-width: 800px;
   margin: auto;
-  margin-top: auto;
+  margin-top: 10px;
   padding: 20px;
 }
 
@@ -36,11 +36,12 @@ button {
 button:hover {
   background-color: #333;
   transform: scale(1.05);
+  transition: 0.2s;
 }
 
 #questions {
   background-color: rgb(255, 255, 255);
-  padding: 5px;
+  padding: 20px;
   border-radius: 2px;
   margin-top: 5px;
   display: none;

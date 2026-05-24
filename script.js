@@ -1,12 +1,13 @@
 function generateQuestions() {
-
-  const vacancy =
-    document.getElementById("jobInput").value.toLowerCase();
-
+  const vacancy = document.getElementById("jobInput").value.toLowerCase();
+  //if textarea is empty, stop generation
+  if (vacancy.trim() === "") {
+    alert("Please paste a job vacancy first.");
+    return;
+  }
   let questions = [];
 
   const jobCategories = {
-
     education: {
       keywords: [
         "teacher",
@@ -15,14 +16,14 @@ function generateQuestions() {
         "instructor",
         "school",
         "curriculum",
-        "student"
+        "student",
       ],
 
       questions: [
         "How do you engage students during lessons?",
         "Describe your teaching philosophy.",
-        "How do you handle difficult students?"
-      ]
+        "How do you handle difficult students?",
+      ],
     },
 
     technology: {
@@ -34,14 +35,14 @@ function generateQuestions() {
         "software",
         "wordpress",
         "chatgpt",
-        "ai"
+        "ai",
       ],
 
       questions: [
         "Describe a technical project you worked on.",
         "How do you solve coding problems?",
-        "How do you explain technical concepts?"
-      ]
+        "How do you explain technical concepts?",
+      ],
     },
 
     administration: {
@@ -51,14 +52,14 @@ function generateQuestions() {
         "office",
         "data entry",
         "excel",
-        "report"
+        "report",
       ],
 
       questions: [
         "How do you prioritize multiple tasks?",
         "Describe your organizational skills.",
-        "How do you maintain accuracy?"
-      ]
+        "How do you maintain accuracy?",
+      ],
     },
 
     translation: {
@@ -67,46 +68,35 @@ function generateQuestions() {
         "proofreading",
         "translator",
         "english",
-        "german"
+        "german",
       ],
 
       questions: [
         "How do you maintain translation accuracy?",
         "Describe your proofreading workflow.",
-        "How do you handle technical terminology?"
-      ]
-    }
-
+        "How do you handle technical terminology?",
+      ],
+    },
   };
 
   for (const category in jobCategories) {
+    const keywords = jobCategories[category].keywords;
 
-    const keywords =
-      jobCategories[category].keywords;
-
-    const matched = keywords.some(keyword =>
-      vacancy.includes(keyword)
-    );
+    const matched = keywords.some((keyword) => vacancy.includes(keyword));
 
     if (matched) {
-
-      questions =
-        jobCategories[category].questions;
+      questions = jobCategories[category].questions;
 
       break;
-
     }
-
   }
 
   if (questions.length === 0) {
-
     questions = [
       "Tell me about yourself.",
       "Why are you interested in this role?",
-      "What are your strengths and weaknesses?"
+      "What are your strengths and weaknesses?",
     ];
-
   }
 
   let output = `
@@ -114,7 +104,7 @@ function generateQuestions() {
     <ul>
   `;
 
-  questions.forEach(question => {
+  questions.forEach((question) => {
     output += `<li>${question}</li>`;
   });
 

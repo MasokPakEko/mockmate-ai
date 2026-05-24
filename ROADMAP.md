@@ -2,46 +2,95 @@
 
 ---
 
-# MONTHLY MISSION — MAY 2026
+# PROJECT TARGET
 
-Frontend Foundations for MockmatE AI
+## Official MVP Deadline
+Target:
+End of July 2026
 
-Main Focus:
-- Understand how frontend web applications work
-- Build consistent development habits
-- Learn project structure and debugging workflow
-- Create a stable foundation before advanced AI integration
+Estimated Development Duration:
+8–12 Weeks
 
-Rules:
-- Avoid rushing into advanced frameworks or AI APIs
-- Focus on understanding every line written
-- Prioritize consistency over speed
-- Commit and push progress regularly
+Development Philosophy:
+- Understand first, optimize later
+- Consistency over intensity
+- Stable architecture before advanced features
+- Build sustainably without burnout
 
 ---
 
-# WEEK 1 — Environment Setup & Frontend Basics
+# PROJECT MISSION
 
-Mission:
-Mastering:
+MockmatE AI is an AI-assisted mock interview simulator designed to help job seekers practice interview scenarios based on real job vacancies.
+
+Core Goals:
+- Reduce interview anxiety
+- Help first-time applicants prepare confidently
+- Simulate realistic interview experiences
+- Build adaptive interview question systems
+- Develop beginner-friendly AI interaction
+
+---
+
+# SESSION RESUME PROTOCOL
+
+At the start of every new development session after a break:
+
+Provide:
 - index.html
 - style.css
 - script.js
 
+Purpose:
+- Review latest architecture state
+- Detect new modifications
+- Prevent outdated fixes
+- Continue roadmap safely and consistently
+
+---
+
+# MONTHLY MISSION — MAY 2026
+
+Frontend Foundations & Beginner Application Logic
+
+Main Focus:
+- Learn frontend architecture
+- Understand HTML/CSS/JS relationships
+- Build stable UI systems
+- Practice debugging workflow
+- Create maintainable project structure
+
+Rules:
+- Avoid rushing into frameworks
+- Avoid API integration too early
+- Understand every major line written
+- Commit and push stable versions regularly
+
+---
+
+# WEEK 1 — Frontend Foundations
+
+Mission:
+Master:
+- HTML structure
+- CSS styling
+- Beginner JavaScript
+- Git workflow
+- Debugging habits
+
 Scope Limitation:
-DO NOT learn:
+DO NOT learn yet:
 - React
-- Database
-- API integration
-- AI integration
 - Backend systems
+- Databases
+- APIs
+- AI integration
 
 Focus ONLY on:
-- HTML
-- CSS
-- JavaScript basics
-- Git workflow
-- Debugging fundamentals
+- Frontend fundamentals
+- UI logic
+- Responsive thinking
+- DOM interaction
 
 ---
 
@@ -50,192 +99,166 @@ Focus ONLY on:
 ## Daily Mission
 Environment Setup & Project Initialization
 
-## Tasks
-- Install Visual Studio Code
+## Tasks Completed
+- Install VS Code
 - Install Git
 - Install GitHub Desktop
-- Connect GitHub account with VS Code
-- Create GitHub repository
-- Clone repository locally
+- Connect GitHub with VS Code
+- Create repository
+- Clone repository
 - Create:
   - index.html
   - style.css
   - script.js
-- Install Live Server extension
-- Run first local webpage
+- Install Live Server
+- Run local webpage
+- First commit & push
 
 ## Skills Learned
-- Local development environment setup
-- GitHub workflow basics
-- Repository cloning
-- File structure organization
+- Local development setup
+- Repository workflow
+- Git basics
 - Live preview workflow
+- File structure organization
 
 ## Reflection Summary
-Today I learned how professional development environments are prepared and how GitHub connects with VS Code. I also successfully created my first frontend project structure.
+Today I successfully built my first frontend development environment and connected GitHub with VS Code to create a real project workflow.
 
 ---
 
 # DAY 2 — May 24
 
 ## Daily Mission
-HTML Structure Fundamentals
+Frontend UI Foundations & Beginner Application Logic
 
-## Tasks
-- Learn HTML hierarchy
-- Create:
-  - headings
-  - paragraphs
-  - buttons
-  - textarea
-  - div containers
-- Create vacancy input section
-- Add Generate Questions button
-- Practice indentation and formatting
-
-## Skills Learned
-- HTML structure
-- Semantic hierarchy
-- Container-based layout thinking
-- Readability through indentation
-
-## Reflection Summary
-Today I learned how webpages are structured using containers and semantic elements. I also began understanding how user input flows inside an application.
-
----
-
-# DAY 3 — May 25
-
-## Daily Mission
-CSS Fundamentals & User Interface Styling
-
-## Tasks
-- Link style.css to index.html
-- Learn:
-  - background-color
-  - color
-  - font-family
-  - padding
-  - margin
-  - border-radius
+## Tasks Completed
+- Create structured HTML layout
+- Implement container system
+- Connect external CSS
+- Connect external JavaScript
 - Style:
-  - body
   - textarea
   - button
-- Experiment with color themes
-- Test responsive resizing
+  - question container
+- Add hover effects
+- Add responsive sizing
+- Build generateQuestions() function
+- Create category-based interview logic
+- Create fallback interview questions
+- Implement dynamic question rendering
+- Implement conditional question visibility
+- Debug:
+  - invalid HTML syntax
+  - JS element targeting
+  - console errors
+- Practice:
+  - browser console debugging
+  - DOM manipulation
+  - UI state handling
 
 ## Skills Learned
-- CSS styling basics
-- Typography fundamentals
-- UI spacing principles
-- Responsive design awareness
-
-## Reflection Summary
-Today I learned how CSS transforms plain HTML into a visual application. I also began experimenting with layout spacing and visual presentation.
-
----
-
-# DAY 4 — May 26
-
-## Daily Mission
-JavaScript Interaction Basics
-
-## Tasks
-- Create generateQuestions() function
-- Learn:
-  - variables
-  - arrays
-  - functions
-  - document.getElementById()
-- Connect button with JavaScript
-- Display generated content dynamically
-
-## Skills Learned
-- JavaScript fundamentals
+- Frontend architecture separation
+- Responsive UI design
 - DOM interaction
-- Dynamic webpage behavior
-- Event-driven logic
+- Event-driven behavior
+- Beginner application logic
+- Dynamic rendering systems
+- Console debugging workflow
 
 ## Reflection Summary
-Today I learned how JavaScript allows webpages to become interactive and responsive to user actions.
+Today I learned how frontend applications combine HTML, CSS, and JavaScript into interactive systems. I also began understanding debugging, UI behavior, and structured application logic.
 
 ---
 
-# DAY 5 — May 27
+# WEEK 2 — Application Logic Expansion
 
-## Daily Mission
-Question Category Logic
+Mission:
+Improve application intelligence and UX.
 
-## Tasks
-- Create jobCategories object
-- Add:
-  - education category
-  - technology category
-  - administration category
-  - translation category
-- Match keywords to categories
-- Generate related interview questions
-
-## Skills Learned
-- Object structures
-- Keyword matching logic
-- Data organization
-- Basic application logic flow
-
-## Reflection Summary
-Today I learned how applications analyze user input and generate related outputs through logical matching systems.
+Focus:
+- Multiple category matching
+- Randomized question generation
+- Input validation
+- Better UI feedback
+- Cleaner rendering systems
+- Reusable logic structures
 
 ---
 
-# DAY 6 — May 28
+# WEEK 3 — Advanced Frontend UI
 
-## Daily Mission
-Debugging & Code Structure Awareness
+Mission:
+Improve user experience and interface polish.
 
-## Tasks
-- Learn:
-  - bracket matching
-  - VS Code error highlighting
-  - console debugging
-  - formatting shortcuts
-- Practice fixing broken syntax intentionally
-- Use:
-  - SHIFT + ALT + F
-  - browser console
-
-## Skills Learned
-- Debugging workflow
-- Syntax troubleshooting
-- Structural code reading
-- Error investigation
-
-## Reflection Summary
-Today I learned that debugging is one of the most important parts of software development and that developer tools help locate problems efficiently.
+Focus:
+- Question cards
+- Layout refinement
+- Responsive mobile behavior
+- Typography consistency
+- Animation fundamentals
+- UI spacing systems
 
 ---
 
-# DAY 7 — May 29
+# WEEK 4 — Interview Simulation Systems
 
-## Daily Mission
-Weekly Review & Stabilization
+Mission:
+Transform question generator into interview simulator.
 
-## Tasks
-- Review all commits
-- Clean unnecessary code
-- Improve indentation consistency
-- Refactor messy sections
-- Re-test application
-- Push stable version to GitHub
+Focus:
+- Timer system
+- Answer fields
+- Interview modes
+- Difficulty levels
+- Progress tracking
+- Session structure
 
-## Skills Learned
-- Code maintenance
-- Refactoring awareness
-- Project stabilization
-- Version management discipline
+---
 
-## Reflection Summary
-Today I reviewed my first week of frontend development and reinforced my understanding of project structure, debugging, and workflow consistency.
+# WEEK 5–6 — Smart Interview Systems
+
+Mission:
+Create more adaptive interview logic.
+
+Focus:
+- Multi-category vacancies
+- Smarter question selection
+- Skill extraction
+- Vacancy analysis
+- Dynamic interview flow
+
+---
+
+# WEEK 7–8 — AI Integration Phase
+
+Mission:
+Introduce real AI-assisted generation.
+
+Possible Integrations:
+- OpenAI API
+- Gemini API
+
+Features:
+- AI-generated questions
+- Vacancy summarization
+- Skill gap analysis
+- Adaptive follow-up questions
+
+---
+
+# WEEK 9–12 — Stabilization & Deployment
+
+Mission:
+Prepare publishable MVP.
+
+Focus:
+- Bug fixing
+- UI polish
+- Mobile responsiveness
+- README improvement
+- GitHub Pages deployment
+- Portfolio presentation
+- Final testing
 
 ---
 
@@ -243,41 +266,17 @@ Today I reviewed my first week of frontend development and reinforced my underst
 
 - What concepts do I fully understand?
 - Which parts still confuse me?
-- Which mistakes happened repeatedly?
-- Which workflow improved my productivity?
-- Which code sections should be cleaned next week?
+- Which bugs happened repeatedly?
+- Which workflow improved productivity?
+- Which code should be cleaned next?
 
 ---
 
 # DEVELOPMENT PRINCIPLES
 
 - Small progress is still progress
-- Understand first, optimize later
-- Clean structure matters more than speed
-- Stable foundation before advanced features
+- Stable systems before advanced features
+- Clean code beats rushed code
 - Debugging is part of development
+- Understand architecture before scaling
 - Consistency beats intensity
-
----
-
-# LONG-TERM ROADMAP
-
-## Phase 1
-Frontend Foundations
-(HTML, CSS, JavaScript, Git)
-
-## Phase 2
-Smarter Interview Logic
-(Category combinations, randomized questions)
-
-## Phase 3
-Advanced UI/UX
-(Responsive layouts, question cards, interview modes)
-
-## Phase 4
-AI Integration
-(OpenAI/Gemini APIs)
-
-## Phase 5
-Full Mock Interview Simulator
-(Voice mode, scoring, AI feedback, saved sessions)
