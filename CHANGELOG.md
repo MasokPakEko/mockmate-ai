@@ -9,55 +9,69 @@
 - Installed Git
 - Installed GitHub Desktop
 - Connected GitHub with VS Code
-- Created repository
+- Created GitHub repository
+- Cloned repository locally
 - Created:
   - index.html
   - style.css
   - script.js
 - Installed Live Server
 - Created first webpage preview
+- Initialized GitHub workflow
 
 ## Learned
-- Git workflow basics
-- Repository cloning
-- Local development setup
-- Live preview workflow
+- Local development environment setup
+- Repository cloning workflow
+- GitHub Desktop basics
+- Live Server usage
+- Frontend file structure organization
+- Basic Git workflow
 
 ## Notes
-Successfully initialized the MockmatE AI project environment.
+Successfully initialized the MockmatE AI project environment and completed the first frontend development setup workflow.
 
 ---
 
 # Day 2 — May 24, 2026
 
 ## Added
-- Container layout system
-- Responsive textarea
-- Styled button UI
-- Hover effects
-- Question result card
-- Dynamic question visibility
-- Category-based question generation
+- Structured frontend layout
+- External CSS and JavaScript connection
+- Responsive textarea system
+- Styled Generate Questions button
+- Hover interaction effects
+- Question result card container
+- Dynamic question visibility system
+- Category-based interview question logic
 - Input validation system
-- Detected category display
+- Detected category display system
+- Capitalized category formatting
 
 ## Improved
-- Better UI spacing
-- Cleaner frontend structure
-- Responsive behavior
-- Interactive button feedback
+- Frontend UI spacing
+- User interaction flow
+- Responsive layout behavior
+- Dynamic rendering structure
+- Visual readability of question outputs
+- Application transparency through category detection
 
 ## Fixed
-- JavaScript ID mismatch bug
-- Hidden question card rendering issue
-- Invalid HTML textarea syntax
+- Question container not appearing issue
+- JavaScript undefined variable issue
+- Invalid HTML structure issues
+- Empty textarea generation behavior
+- CSS spacing inconsistencies
 
 ## Learned
 - DOM manipulation
-- Event-driven behavior
-- Browser console debugging
-- Dynamic rendering systems
-- Input validation workflow
+- Event-driven JavaScript behavior
+- Input validation systems
+- Dynamic HTML rendering
+- Category classification logic
+- Browser console debugging workflow
+- Variable scope debugging
+- UI state handling
+- Frontend architecture separation
 
 ## Notes
-Today marked the transition from static HTML into interactive frontend application behavior.
+Today marked the transition from static webpage building into interactive frontend application development. The project now includes structured rendering systems, validation logic, category detection, and improved UI behavior.

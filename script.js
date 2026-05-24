@@ -6,6 +6,7 @@ function generateQuestions() {
     return;
   }
   let questions = [];
+  let detectedCategory = "General";
 
   const jobCategories = {
     education: {
@@ -87,6 +88,8 @@ function generateQuestions() {
     if (matched) {
       questions = jobCategories[category].questions;
 
+      detectedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+
       break;
     }
   }
@@ -101,6 +104,12 @@ function generateQuestions() {
 
   let output = `
     <h2>Mock Interview Questions</h2>
+
+    <p>
+      <strong>Detected Category:</strong>
+      ${detectedCategory}
+    </p>
+
     <ul>
   `;
 
