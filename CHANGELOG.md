@@ -1,77 +1,82 @@
-# CHANGELOG — MockmatE AI
+# Changelog
+
+## Day 1 — Project Initialization
+
+### Added
+
+* Installed VS Code, Git, and GitHub Desktop
+* Connected GitHub with local development environment
+* Created initial project files:
+
+  * index.html
+  * style.css
+  * script.js
+* Built initial webpage structure
+* Added basic textarea and button interface
+
+### Improved
+
+* Configured Live Server workflow
+* Organized basic project structure
 
 ---
 
-# Day 1 — May 23, 2026
+## Day 2 — User Interface & Basic Logic
 
-## Added
-- Installed VS Code
-- Installed Git
-- Installed GitHub Desktop
-- Connected GitHub with VS Code
-- Created GitHub repository
-- Cloned repository locally
-- Created:
-  - index.html
-  - style.css
-  - script.js
-- Installed Live Server
-- Created first webpage preview
-- Initialized GitHub workflow
+### Added
 
-## Learned
-- Local development environment setup
-- Repository cloning workflow
-- GitHub Desktop basics
-- Live Server usage
-- Frontend file structure organization
-- Basic Git workflow
+* Question generation system
+* Job category detection system
+* Dynamic output rendering
+* Validation alert for empty textarea
+* Responsive textarea layout
+* Styled output card
+* Hover effects for buttons
 
-## Notes
-Successfully initialized the MockmatE AI project environment and completed the first frontend development setup workflow.
+### Improved
+
+* UI spacing and readability
+* Button styling consistency
+* Responsive design structure
+* Question display visibility
+
+### Fixed
+
+* Output card visibility issue
+* Category rendering bug
+* JavaScript generation logic issue
 
 ---
 
-# Day 2 — May 24, 2026
+## Day 3 — Application Intelligence Expansion
 
-## Added
-- Structured frontend layout
-- External CSS and JavaScript connection
-- Responsive textarea system
-- Styled Generate Questions button
-- Hover interaction effects
-- Question result card container
-- Dynamic question visibility system
-- Category-based interview question logic
-- Input validation system
-- Detected category display system
-- Capitalized category formatting
+### Added
 
-## Improved
-- Frontend UI spacing
-- User interaction flow
-- Responsive layout behavior
-- Dynamic rendering structure
-- Visual readability of question outputs
-- Application transparency through category detection
+* Multi-category detection system
+* Randomized interview question generation
+* Duplicate question filtering
+* Expanded professional job categories:
 
-## Fixed
-- Question container not appearing issue
-- JavaScript undefined variable issue
-- Invalid HTML structure issues
-- Empty textarea generation behavior
-- CSS spacing inconsistencies
+  * Customer Service
+  * Sales & Marketing
+  * Finance & Accounting
+  * Design & Creative
+  * Human Resources
+  * Project Management
+  * Engineering
+  * Media & Content
+* Dynamic category formatting system
 
-## Learned
-- DOM manipulation
-- Event-driven JavaScript behavior
-- Input validation systems
-- Dynamic HTML rendering
-- Category classification logic
-- Browser console debugging workflow
-- Variable scope debugging
-- UI state handling
-- Frontend architecture separation
+### Improved
 
-## Notes
-Today marked the transition from static webpage building into interactive frontend application development. The project now includes structured rendering systems, validation logic, category detection, and improved UI behavior.
+* Replayability of interview generation
+* Output realism and variability
+* Scalable category architecture
+* Question rendering intelligence
+* User-facing category presentation
+
+### Refactored
+
+* Converted category handling into array-based architecture
+* Introduced scalable rendering preparation logic
+* Improved internal data formatting structure

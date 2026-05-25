@@ -6,7 +6,7 @@ function generateQuestions() {
     return;
   }
   let questions = [];
-  let detectedCategory = "General";
+  let detectedCategories = [];
 
   const jobCategories = {
     education: {
@@ -78,6 +78,181 @@ function generateQuestions() {
         "How do you handle technical terminology?",
       ],
     },
+
+    customer_service: {
+      keywords: [
+        "customer service",
+        "support",
+        "call center",
+        "client",
+        "complaint",
+        "service desk",
+        "customer care",
+      ],
+
+      questions: [
+        "How do you handle difficult customers?",
+        "Describe a time you solved a customer issue.",
+        "How do you stay calm under pressure?",
+        "What does excellent customer service mean to you?",
+        "How do you manage multiple customer requests?",
+        "Describe a situation where you exceeded customer expectations.",
+      ],
+    },
+
+    sales_marketing: {
+      keywords: [
+        "sales",
+        "marketing",
+        "promotion",
+        "digital marketing",
+        "branding",
+        "advertising",
+        "lead generation",
+        "social media",
+      ],
+
+      questions: [
+        "How do you approach new clients?",
+        "Describe a successful campaign you worked on.",
+        "How do you handle rejection in sales?",
+        "What strategies do you use to increase engagement?",
+        "How do you measure marketing success?",
+        "Describe your communication style with customers.",
+      ],
+    },
+
+    finance_accounting: {
+      keywords: [
+        "finance",
+        "accounting",
+        "bookkeeping",
+        "tax",
+        "invoice",
+        "budget",
+        "payroll",
+        "financial",
+      ],
+
+      questions: [
+        "How do you maintain financial accuracy?",
+        "Describe your experience handling budgets.",
+        "How do you prioritize financial deadlines?",
+        "What accounting software are you familiar with?",
+        "How do you identify financial discrepancies?",
+        "Describe a financial report you prepared.",
+      ],
+    },
+
+    design_creative: {
+      keywords: [
+        "design",
+        "graphic",
+        "ui",
+        "ux",
+        "photoshop",
+        "illustrator",
+        "creative",
+        "branding",
+      ],
+
+      questions: [
+        "Describe your design process.",
+        "How do you handle client feedback?",
+        "What inspires your creative work?",
+        "Describe a challenging creative project.",
+        "How do you balance creativity with deadlines?",
+        "What design tools are you most comfortable using?",
+      ],
+    },
+
+    human_resources: {
+      keywords: [
+        "human resources",
+        "hr",
+        "recruitment",
+        "talent",
+        "hiring",
+        "employee",
+        "onboarding",
+        "recruiter",
+      ],
+
+      questions: [
+        "How do you handle workplace conflict?",
+        "Describe your recruitment process experience.",
+        "How do you evaluate candidates effectively?",
+        "What strategies improve employee engagement?",
+        "How do you maintain confidentiality in HR work?",
+        "Describe a successful hiring experience.",
+      ],
+    },
+
+    project_management: {
+      keywords: [
+        "project manager",
+        "project management",
+        "planning",
+        "scrum",
+        "agile",
+        "deadline",
+        "coordination",
+        "stakeholder",
+      ],
+
+      questions: [
+        "How do you manage project deadlines?",
+        "Describe a challenging project you handled.",
+        "How do you prioritize competing tasks?",
+        "What project management tools have you used?",
+        "How do you communicate with stakeholders?",
+        "Describe your leadership approach in projects.",
+      ],
+    },
+
+    engineering: {
+      keywords: [
+        "engineer",
+        "mechanical",
+        "electrical",
+        "civil",
+        "technical drawing",
+        "autocad",
+        "manufacturing",
+        "engineering",
+      ],
+
+      questions: [
+        "Describe a technical problem you solved.",
+        "How do you ensure engineering accuracy?",
+        "What engineering software are you familiar with?",
+        "Describe a challenging engineering project.",
+        "How do you manage safety standards?",
+        "How do you approach troubleshooting?",
+      ],
+    },
+
+    media_content: {
+      keywords: [
+        "content",
+        "writer",
+        "copywriting",
+        "video editing",
+        "youtube",
+        "social media",
+        "editing",
+        "media",
+      ],
+
+      questions: [
+        "Describe your content creation process.",
+        "How do you adapt content for different audiences?",
+        "What tools do you use for media production?",
+        "How do you manage content deadlines?",
+        "Describe a successful content project.",
+        "How do you measure audience engagement?",
+      ],
+    },
   };
 
   for (const category in jobCategories) {
@@ -86,12 +261,19 @@ function generateQuestions() {
     const matched = keywords.some((keyword) => vacancy.includes(keyword));
 
     if (matched) {
-      questions = jobCategories[category].questions;
+      questions.push(...jobCategories[category].questions);
 
-      detectedCategory = category.charAt(0).toUpperCase() + category.slice(1);
-
-      break;
+      detectedCategories.push(
+        category
+          .split("_")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" "),
+      );
     }
+  }
+
+  if (detectedCategories.length === 0) {
+    detectedCategories.push("General");
   }
 
   if (questions.length === 0) {
@@ -101,19 +283,24 @@ function generateQuestions() {
       "What are your strengths and weaknesses?",
     ];
   }
+  const uniqueQuestions = [...new Set(questions)];
+
+  const randomizedQuestions = uniqueQuestions
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
 
   let output = `
     <h2>Mock Interview Questions</h2>
 
     <p>
       <strong>Detected Category:</strong>
-      ${detectedCategory}
+      ${detectedCategories.join(", ")}
     </p>
 
     <ul>
   `;
 
-  questions.forEach((question) => {
+  randomizedQuestions.forEach((question) => {
     output += `<li>${question}</li>`;
   });
 
