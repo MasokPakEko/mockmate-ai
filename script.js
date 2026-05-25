@@ -1,334 +1,307 @@
 function generateQuestions() {
+  // Vacancy Input
+  const vacancy = document.getElementById("jobInput").value.toLowerCase();
 
-// Vacancy Input
-const vacancy =
-document.getElementById("jobInput").value.toLowerCase();
+  // Validation
+  //if textarea is empty, stop generation
+  if (vacancy.trim() === "") {
+    alert("Please paste a job vacancy first.");
+    return;
+  }
 
-// Validation
-//if textarea is empty, stop generation
-if (vacancy.trim() === "") {
-alert("Please paste a job vacancy first.");
-return;
-}
+  // Question Storage
+  let questions = [];
+  let detectedCategories = [];
 
-// Question Storage
-let questions = [];
-let detectedCategories = [];
+  // Job Category Database
+  const jobCategories = {
+    education: {
+      keywords: [
+        "teacher",
+        "tutor",
+        "educator",
+        "instructor",
+        "school",
+        "curriculum",
+        "student",
+      ],
 
-// Job Category Database
-const jobCategories = {
+      questions: [
+        "How do you engage students during lessons?",
+        "Describe your teaching philosophy.",
+        "How do you handle difficult students?",
+      ],
+    },
 
-```
-education: {
-  keywords: [
-    "teacher",
-    "tutor",
-    "educator",
-    "instructor",
-    "school",
-    "curriculum",
-    "student",
-  ],
+    technology: {
+      keywords: [
+        "coding",
+        "robotics",
+        "developer",
+        "programming",
+        "software",
+        "wordpress",
+        "chatgpt",
+        "ai",
+      ],
 
-  questions: [
-    "How do you engage students during lessons?",
-    "Describe your teaching philosophy.",
-    "How do you handle difficult students?",
-  ],
-},
+      questions: [
+        "Describe a technical project you worked on.",
+        "How do you solve coding problems?",
+        "How do you explain technical concepts?",
+      ],
+    },
 
-technology: {
-  keywords: [
-    "coding",
-    "robotics",
-    "developer",
-    "programming",
-    "software",
-    "wordpress",
-    "chatgpt",
-    "ai",
-  ],
+    administration: {
+      keywords: [
+        "admin",
+        "assistant",
+        "office",
+        "data entry",
+        "excel",
+        "report",
+      ],
 
-  questions: [
-    "Describe a technical project you worked on.",
-    "How do you solve coding problems?",
-    "How do you explain technical concepts?",
-  ],
-},
+      questions: [
+        "How do you prioritize multiple tasks?",
+        "Describe your organizational skills.",
+        "How do you maintain accuracy?",
+      ],
+    },
 
-administration: {
-  keywords: [
-    "admin",
-    "assistant",
-    "office",
-    "data entry",
-    "excel",
-    "report",
-  ],
+    translation: {
+      keywords: [
+        "translation",
+        "proofreading",
+        "translator",
+        "english",
+        "german",
+      ],
 
-  questions: [
-    "How do you prioritize multiple tasks?",
-    "Describe your organizational skills.",
-    "How do you maintain accuracy?",
-  ],
-},
+      questions: [
+        "How do you maintain translation accuracy?",
+        "Describe your proofreading workflow.",
+        "How do you handle technical terminology?",
+      ],
+    },
 
-translation: {
-  keywords: [
-    "translation",
-    "proofreading",
-    "translator",
-    "english",
-    "german",
-  ],
+    customer_service: {
+      keywords: [
+        "customer service",
+        "support",
+        "call center",
+        "client",
+        "complaint",
+        "service desk",
+        "customer care",
+      ],
 
-  questions: [
-    "How do you maintain translation accuracy?",
-    "Describe your proofreading workflow.",
-    "How do you handle technical terminology?",
-  ],
-},
+      questions: [
+        "How do you handle difficult customers?",
+        "Describe a time you solved a customer issue.",
+        "How do you stay calm under pressure?",
+        "What does excellent customer service mean to you?",
+        "How do you manage multiple customer requests?",
+        "Describe a situation where you exceeded customer expectations.",
+      ],
+    },
 
-customer_service: {
-  keywords: [
-    "customer service",
-    "support",
-    "call center",
-    "client",
-    "complaint",
-    "service desk",
-    "customer care",
-  ],
+    sales_marketing: {
+      keywords: [
+        "sales",
+        "marketing",
+        "promotion",
+        "digital marketing",
+        "branding",
+        "advertising",
+        "lead generation",
+        "social media",
+      ],
 
-  questions: [
-    "How do you handle difficult customers?",
-    "Describe a time you solved a customer issue.",
-    "How do you stay calm under pressure?",
-    "What does excellent customer service mean to you?",
-    "How do you manage multiple customer requests?",
-    "Describe a situation where you exceeded customer expectations.",
-  ],
-},
+      questions: [
+        "How do you approach new clients?",
+        "Describe a successful campaign you worked on.",
+        "How do you handle rejection in sales?",
+        "What strategies do you use to increase engagement?",
+        "How do you measure marketing success?",
+        "Describe your communication style with customers.",
+      ],
+    },
 
-sales_marketing: {
-  keywords: [
-    "sales",
-    "marketing",
-    "promotion",
-    "digital marketing",
-    "branding",
-    "advertising",
-    "lead generation",
-    "social media",
-  ],
+    finance_accounting: {
+      keywords: [
+        "finance",
+        "accounting",
+        "bookkeeping",
+        "tax",
+        "invoice",
+        "budget",
+        "payroll",
+        "financial",
+      ],
 
-  questions: [
-    "How do you approach new clients?",
-    "Describe a successful campaign you worked on.",
-    "How do you handle rejection in sales?",
-    "What strategies do you use to increase engagement?",
-    "How do you measure marketing success?",
-    "Describe your communication style with customers.",
-  ],
-},
+      questions: [
+        "How do you maintain financial accuracy?",
+        "Describe your experience handling budgets.",
+        "How do you prioritize financial deadlines?",
+        "What accounting software are you familiar with?",
+        "How do you identify financial discrepancies?",
+        "Describe a financial report you prepared.",
+      ],
+    },
 
-finance_accounting: {
-  keywords: [
-    "finance",
-    "accounting",
-    "bookkeeping",
-    "tax",
-    "invoice",
-    "budget",
-    "payroll",
-    "financial",
-  ],
+    design_creative: {
+      keywords: [
+        "design",
+        "graphic",
+        "ui",
+        "ux",
+        "photoshop",
+        "illustrator",
+        "creative",
+        "branding",
+      ],
 
-  questions: [
-    "How do you maintain financial accuracy?",
-    "Describe your experience handling budgets.",
-    "How do you prioritize financial deadlines?",
-    "What accounting software are you familiar with?",
-    "How do you identify financial discrepancies?",
-    "Describe a financial report you prepared.",
-  ],
-},
+      questions: [
+        "Describe your design process.",
+        "How do you handle client feedback?",
+        "What inspires your creative work?",
+        "Describe a challenging creative project.",
+        "How do you balance creativity with deadlines?",
+        "What design tools are you most comfortable using?",
+      ],
+    },
 
-design_creative: {
-  keywords: [
-    "design",
-    "graphic",
-    "ui",
-    "ux",
-    "photoshop",
-    "illustrator",
-    "creative",
-    "branding",
-  ],
+    human_resources: {
+      keywords: [
+        "human resources",
+        "hr",
+        "recruitment",
+        "talent",
+        "hiring",
+        "employee",
+        "onboarding",
+        "recruiter",
+      ],
 
-  questions: [
-    "Describe your design process.",
-    "How do you handle client feedback?",
-    "What inspires your creative work?",
-    "Describe a challenging creative project.",
-    "How do you balance creativity with deadlines?",
-    "What design tools are you most comfortable using?",
-  ],
-},
+      questions: [
+        "How do you handle workplace conflict?",
+        "Describe your recruitment process experience.",
+        "How do you evaluate candidates effectively?",
+        "What strategies improve employee engagement?",
+        "How do you maintain confidentiality in HR work?",
+        "Describe a successful hiring experience.",
+      ],
+    },
 
-human_resources: {
-  keywords: [
-    "human resources",
-    "hr",
-    "recruitment",
-    "talent",
-    "hiring",
-    "employee",
-    "onboarding",
-    "recruiter",
-  ],
+    project_management: {
+      keywords: [
+        "project manager",
+        "project management",
+        "planning",
+        "scrum",
+        "agile",
+        "deadline",
+        "coordination",
+        "stakeholder",
+      ],
 
-  questions: [
-    "How do you handle workplace conflict?",
-    "Describe your recruitment process experience.",
-    "How do you evaluate candidates effectively?",
-    "What strategies improve employee engagement?",
-    "How do you maintain confidentiality in HR work?",
-    "Describe a successful hiring experience.",
-  ],
-},
+      questions: [
+        "How do you manage project deadlines?",
+        "Describe a challenging project you handled.",
+        "How do you prioritize competing tasks?",
+        "What project management tools have you used?",
+        "How do you communicate with stakeholders?",
+        "Describe your leadership approach in projects.",
+      ],
+    },
 
-project_management: {
-  keywords: [
-    "project manager",
-    "project management",
-    "planning",
-    "scrum",
-    "agile",
-    "deadline",
-    "coordination",
-    "stakeholder",
-  ],
+    engineering: {
+      keywords: [
+        "engineer",
+        "mechanical",
+        "electrical",
+        "civil",
+        "technical drawing",
+        "autocad",
+        "manufacturing",
+        "engineering",
+      ],
 
-  questions: [
-    "How do you manage project deadlines?",
-    "Describe a challenging project you handled.",
-    "How do you prioritize competing tasks?",
-    "What project management tools have you used?",
-    "How do you communicate with stakeholders?",
-    "Describe your leadership approach in projects.",
-  ],
-},
+      questions: [
+        "Describe a technical problem you solved.",
+        "How do you ensure engineering accuracy?",
+        "What engineering software are you familiar with?",
+        "Describe a challenging engineering project.",
+        "How do you manage safety standards?",
+        "How do you approach troubleshooting?",
+      ],
+    },
 
-engineering: {
-  keywords: [
-    "engineer",
-    "mechanical",
-    "electrical",
-    "civil",
-    "technical drawing",
-    "autocad",
-    "manufacturing",
-    "engineering",
-  ],
+    media_content: {
+      keywords: [
+        "content",
+        "writer",
+        "copywriting",
+        "video editing",
+        "youtube",
+        "social media",
+        "editing",
+        "media",
+      ],
 
-  questions: [
-    "Describe a technical problem you solved.",
-    "How do you ensure engineering accuracy?",
-    "What engineering software are you familiar with?",
-    "Describe a challenging engineering project.",
-    "How do you manage safety standards?",
-    "How do you approach troubleshooting?",
-  ],
-},
+      questions: [
+        "Describe your content creation process.",
+        "How do you adapt content for different audiences?",
+        "What tools do you use for media production?",
+        "How do you manage content deadlines?",
+        "Describe a successful content project.",
+        "How do you measure audience engagement?",
+      ],
+    },
+  };
 
-media_content: {
-  keywords: [
-    "content",
-    "writer",
-    "copywriting",
-    "video editing",
-    "youtube",
-    "social media",
-    "editing",
-    "media",
-  ],
+  // Category Detection
+  for (const category in jobCategories) {
+    const keywords = jobCategories[category].keywords;
 
-  questions: [
-    "Describe your content creation process.",
-    "How do you adapt content for different audiences?",
-    "What tools do you use for media production?",
-    "How do you manage content deadlines?",
-    "Describe a successful content project.",
-    "How do you measure audience engagement?",
-  ],
-},
-```
+    const matched = keywords.some((keyword) => vacancy.includes(keyword));
 
-};
+    if (matched) {
+      questions.push(...jobCategories[category].questions);
 
-// Category Detection
-for (const category in jobCategories) {
+      detectedCategories.push(
+        category
+          .split("_")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" "),
+      );
+    }
+  }
 
-```
-const keywords =
-  jobCategories[category].keywords;
+  // Default Fallback
+  if (detectedCategories.length === 0) {
+    detectedCategories.push("General");
+  }
 
-const matched =
-  keywords.some((keyword) =>
-    vacancy.includes(keyword)
-  );
+  if (questions.length === 0) {
+    questions = [
+      "Tell me about yourself.",
+      "Why are you interested in this role?",
+      "What are your strengths and weaknesses?",
+    ];
+  }
 
-if (matched) {
+  // Duplicate Filtering
+  const uniqueQuestions = [...new Set(questions)];
 
-  questions.push(
-    ...jobCategories[category].questions
-  );
+  // Randomized Question Selection
+  const randomizedQuestions = uniqueQuestions
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
 
-  detectedCategories.push(
-    category
-      .split("_")
-      .map((word) =>
-        word.charAt(0).toUpperCase() +
-        word.slice(1)
-      )
-      .join(" "),
-  );
-
-}
-```
-
-}
-
-// Default Fallback
-if (detectedCategories.length === 0) {
-detectedCategories.push("General");
-}
-
-if (questions.length === 0) {
-
-```
-questions = [
-  "Tell me about yourself.",
-  "Why are you interested in this role?",
-  "What are your strengths and weaknesses?",
-];
-```
-
-}
-
-// Duplicate Filtering
-const uniqueQuestions =
-[...new Set(questions)];
-
-// Randomized Question Selection
-const randomizedQuestions =
-uniqueQuestions
-.sort(() => 0.5 - Math.random())
-.slice(0, 3);
-
-// Output Rendering
-let output = `
+  // Output Rendering
+  let output = `
   <h2>Mock Interview Questions</h2>
 
   <p>
@@ -339,17 +312,15 @@ let output = `
   <ul>
 `;
 
-randomizedQuestions.forEach((question) => {
-  output += `<li>${question}</li>`;
-});
+  randomizedQuestions.forEach((question) => {
+    output += `<li>${question}</li>`;
+  });
 
-output += `</ul>`;
+  output += `</ul>`;
 
-// DOM Rendering
-const questionBox =
-  document.getElementById("questions");
+  // DOM Rendering
+  const questionBox = document.getElementById("questions");
 
-questionBox.innerHTML = output;
-questionBox.style.display = "block";
-
+  questionBox.innerHTML = output;
+  questionBox.style.display = "block";
 }
