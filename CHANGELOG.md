@@ -1,105 +1,50 @@
 # CHANGELOG.md
 
-# MockmatE AI — Changelog
+## Day 1 — Initial Project Setup
+- Created initial HTML structure
+- Added textarea input system
+- Added Generate Questions button
+- Built first JavaScript question generator
+- Implemented basic question rendering
+- Connected HTML, CSS, and JavaScript files
 
 ---
 
-## Day 1 — Project Initialization
-
-### Added
-
-* Installed VS Code
-* Installed Git
-* Installed GitHub Desktop
-* Connected GitHub account with local development environment
-* Created initial project files:
-
-  * index.html
-  * style.css
-  * script.js
-* Configured Live Server workflow
-* Created initial webpage structure
-* Added vacancy textarea input
-* Added Generate Questions button
-
-### Improved
-
-* Organized beginner project structure
-* Established local frontend workflow
-* Introduced Git-based development process
+## Day 2 — Category Detection System
+- Added keyword-based job category detection
+- Implemented dynamic interview question generation
+- Added Detected Category display
+- Improved vacancy parsing logic
+- Added fallback General category system
+- Introduced scalable job category database
+- Learned debugging for undefined variable issues
 
 ---
 
-## Day 2 — UI & Basic Logic Expansion
-
-### Added
-
-* Interview question generation system
-* Job category detection system
-* Dynamic output rendering system
-* Responsive textarea layout
-* Output display card
-* Hover effects for buttons
-* Empty-input validation alert
-* Detected category display
-
-### Improved
-
-* UI spacing and readability
-* Button consistency and responsiveness
-* Visual hierarchy
-* Output visibility and presentation
-* Responsive layout behavior
-
-### Fixed
-
-* Output rendering visibility issue
-* Category rendering issue
-* JavaScript generation errors
-* Empty textarea handling issue
+## Day 3 — Data Expansion & Rendering Improvements
+- Expanded supported job categories significantly
+- Added multi-category detection system
+- Added randomized question generation
+- Implemented duplicate filtering using Set()
+- Added numbered question rendering
+- Improved category formatting readability
+- Added navigation comments across script.js
+- Improved rendering pipeline structure
+- Introduced scalable frontend architecture concepts
 
 ---
 
-## Day 3 — Application Intelligence Expansion
-
-### Added
-
-* Multi-category detection system
-* Randomized interview question generation
-* Duplicate question filtering
-* Dynamic category formatting system
-* Expanded professional sectors:
-
-  * Customer Service
-  * Sales & Marketing
-  * Finance & Accounting
-  * Design & Creative
-  * Human Resources
-  * Project Management
-  * Engineering
-  * Media & Content
-* Replayable interview generation logic
-* Improved rendering preparation structure
-
-### Improved
-
-* Replayability and realism
-* Scalable category architecture
-* User-facing category formatting
-* Question rendering intelligence
-* Array-based logic scalability
-* Maintainability of generation system
-
-### Refactored
-
-* Converted category handling into scalable array architecture
-* Improved internal formatting logic
-* Improved rendering preparation flow
-* Separated internal category naming from display formatting
-
-### Stability Review
-
-* Confirmed scalable rendering structure
-* Confirmed duplicate filtering stability
-* Confirmed randomization stability
-* Confirmed maintainable logic structure
+## Day 4 — UI/UX Professional Polish
+- Added output card interface design
+- Implemented shadow layering system
+- Added smooth fade-in animations
+- Improved typography hierarchy
+- Improved spacing and readability systems
+- Added inline validation message system
+- Replaced browser alert popup validation
+- Added button hover interaction effects
+- Added button active click feedback
+- Improved textarea UI styling
+- Added modern component-style validation design
+- Improved frontend micro-interactions
+- Refined overall visual hierarchy

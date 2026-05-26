@@ -1,14 +1,19 @@
 function generateQuestions() {
   // Vacancy Input
   const vacancy = document.getElementById("jobInput").value.toLowerCase();
-
+  const validationMessage = document.getElementById("validationMessage");
   // Validation
   //if textarea is empty, stop generation
   if (vacancy.trim() === "") {
-    alert("Please paste a job vacancy first.");
+    validationMessage.style.display = "block";
+
+    validationMessage.textContent = "[ERROR] Please paste a job vacancy first.";
+
     return;
   }
 
+  // Hide validation message if input exists
+  validationMessage.style.display = "none";
   // Question Storage
   let questions = [];
   let detectedCategories = [];
@@ -312,12 +317,16 @@ function generateQuestions() {
   <ul>
 `;
 
-  randomizedQuestions.forEach((question) => {
-    output += `<li>${question}</li>`;
+  randomizedQuestions.forEach((question, index) => {
+    output += `
+    <li>
+      <strong>Question ${index + 1}:</strong>
+      ${question}
+    </li>
+  `;
   });
 
   output += `</ul>`;
-
   // DOM Rendering
   const questionBox = document.getElementById("questions");
 

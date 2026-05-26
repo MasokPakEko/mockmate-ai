@@ -1,7 +1,9 @@
 body {
   background-color: #0a91cf;
   color: rgb(0, 0, 0);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
 }
 
 .container {
@@ -14,11 +16,11 @@ body {
 textarea {
   width: 100%;
   min-height: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   padding: 10px;
   font-size: 16px;
   box-sizing: border-box;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 button {
@@ -31,27 +33,166 @@ button {
   cursor: pointer;
   border-radius: 8px;
   margin-bottom: 30px;
-  transition: 0.2s;
+  /* Smooth hover animation */
+  transition: all 0.25s ease;
 }
+
+/* =========================
+   BUTTON HOVER EFFECT
+========================= */
 
 button:hover {
-  background-color: #333;
-  transform: scale(1.02);
-  }
+  /* Slight upward movement */
+  transform: translateY(-2px);
 
-#questions {
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
-  border-radius: 2px;
-  margin-top: 5px;
-  display: none;
+  /* Slightly brighter button */
+  background-color: #111;
+
+  /* Stronger shadow during hover */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
+/* =========================
+   BUTTON CLICK EFFECT
+========================= */
+
+button:active {
+  /* Simulates button press */
+  transform: translateY(1px);
+
+  /* Slightly smaller shadow during press */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   OUTPUT CARD
+========================= */
+
+#questions {
+  background-color: white;
+
+  /* Internal spacing for cleaner readability */
+  padding: 30px;
+
+  /* Modern rounded card appearance */
+  border-radius: 16px;
+
+  /* Visual separation from input section */
+  margin-top: 10px;
+
+  /* Hidden initially before generation */
+  display: none;
+
+  /* Floating card shadow for visual depth */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  /* Smooth entrance animation */
+  animation: fadeIn 0.4s ease;
+}
+
+/* =========================
+   OUTPUT LIST STYLING
+========================= */
+
 #questions ul {
-  padding-left: 20px;
+  /* Creates breathing room above question list */
+  margin-top: 20px;
+
+  /* Better alignment for list content */
+  padding-left: 25px;
 }
 
 #questions li {
-  margin-bottom: 5px;
-  line-height: 1.5;
+  /* Space between each interview question */
+  margin-bottom: 14px;
+
+  /* Improves multi-line readability */
+  line-height: 1.7;
+
+  /* Makes interview questions easier to read */
+  font-size: 17px;
+}
+
+/* =========================
+   VALIDATION MESSAGE
+========================= */
+
+#validationMessage {
+  /* Hidden by default */
+  display: none;
+
+  /* Professional error red */
+  color: #d30000;
+
+  /* Soft error background */
+  background-color: #ffe5e5;
+
+  /* Internal spacing */
+  padding: 12px;
+
+  /* Rounded alert box */
+  border-radius: 10px;
+
+  /* Space below textarea */
+  margin-top: 5px;
+
+  /* Cleaner readability */
+  font-size: 15px;
+
+  /* Slight emphasis */
+  font-weight: bold;
+}
+
+/* =========================
+   QUESTION LABELS
+========================= */
+
+#questions li strong {
+  /* Creates stronger numbering emphasis */
+  color: #111111;
+}
+
+/* =========================
+   OUTPUT TYPOGRAPHY
+========================= */
+
+#questions h2 {
+  /* Removes unnecessary top spacing */
+  margin-top: 0;
+
+  /* Creates separation below title */
+  margin-bottom: 20px;
+
+  /* Strong visual hierarchy for output title */
+  font-size: 28px;
+}
+
+#questions p {
+  /* Space between category text and questions */
+  margin-bottom: 20px;
+
+  /* Balanced readability size */
+  font-size: 16px;
+}
+
+/* =========================
+   OUTPUT ANIMATION
+========================= */
+
+@keyframes fadeIn {
+  from {
+    /* Starts invisible */
+    opacity: 0;
+
+    /* Starts slightly lower for soft rise effect */
+    transform: translateY(10px);
+  }
+
+  to {
+    /* Ends fully visible */
+    opacity: 1;
+
+    /* Returns to natural position */
+    transform: translateY(0);
+  }
 }
