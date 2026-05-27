@@ -170,6 +170,168 @@ Today I learned how frontend applications combine HTML, CSS, and JavaScript into
 
 ---
 
+# DAY 3 — May 25
+
+## Daily Mission
+Application Intelligence Expansion & Scalable Rendering Logic
+
+## Tasks Completed
+- Expand interview category database
+- Add:
+  - customer service
+  - sales & marketing
+  - finance & accounting
+  - design & creative
+  - human resources
+  - project management
+  - engineering
+  - media & content
+- Implement duplicate filtering system
+- Implement randomized question rendering
+- Create scalable category matching structure
+- Improve rendering preparation logic
+- Add reusable rendering pipelines
+- Add navigation comments throughout script.js
+- Improve code readability structure
+- Debug:
+  - template literal syntax
+  - invalid rendering structure
+  - missing closing tags
+  - DOM rendering failures
+- Practice:
+  - array methods
+  - spread operator (...)
+  - randomization systems
+  - rendering architecture logic
+
+## Skills Learned
+- Arrays
+- Array methods
+- Spread operator (...)
+- Duplicate filtering systems
+- Randomization logic
+- Rendering preparation workflows
+- Scalable frontend architecture concepts
+- Dynamic content systems
+- Readable code structuring
+- Frontend debugging workflow
+
+## Reflection Summary
+Today the project evolved beyond simple rendering logic and began introducing scalable frontend architecture concepts. I learned how reusable rendering systems, duplicate filtering, and randomized question pipelines improve both application intelligence and maintainability.
+
+---
+
+# DAY 4 — May 26
+
+## Daily Mission
+Frontend UX Polish & Interactive User Feedback Systems
+
+## Tasks Completed
+- Improve textarea styling
+- Improve container spacing
+- Improve output card styling
+- Add:
+  - box shadows
+  - rounded corners
+  - typography improvements
+  - spacing systems
+- Create hover button animation
+- Create button click animation
+- Add fadeIn animation for output rendering
+- Implement inline validation message system
+- Replace alert() workflow with UI-based validation
+- Create validation message styling
+- Add conditional validation visibility
+- Improve question readability layout
+- Add numbered question rendering
+- Add CSS navigation comments
+- Add frontend readability comments
+- Debug:
+  - animation rendering issues
+  - validation visibility problems
+  - spacing conflicts
+  - CSS formatting conflicts
+- Practice:
+  - CSS animations
+  - keyframes
+  - transitions
+  - opacity systems
+  - transform systems
+  - interactive UI behavior
+
+## Skills Learned
+- CSS animation systems
+- Keyframes
+- Opacity transitions
+- Transform animations
+- Interactive UI feedback systems
+- Inline validation UX
+- Frontend readability structuring
+- Visual hierarchy systems
+- UI polish architecture
+- Conditional frontend visibility
+- Frontend UX engineering concepts
+
+## Reflection Summary
+Today the project evolved beyond functionality and began focusing on frontend user experience engineering. I learned how animation systems, validation feedback, spacing architecture, and interactive UI behavior improve usability, readability, and professional frontend presentation.
+
+---
+
+# DAY 5 — May 27
+
+## Daily Mission
+Interactive State Systems & Configurable Frontend Behavior
+
+## Tasks Completed
+- Create reusable utility function:
+  - getRandomQuestions()
+- Refactor randomized question selection logic
+- Create configurable question amount system
+- Add dropdown-based question amount selector
+- Connect dropdown value to rendering logic
+- Implement dynamic UI state reading
+- Create regenerate question system
+- Implement session continuity interaction flow
+- Add regenerate button visibility system
+- Add conditional generate/regenerate behavior
+- Expand general fallback question database
+- Improve rendering scalability structure
+- Improve utility function readability
+- Improve frontend interaction architecture
+- Debug:
+  - stale dropdown state behavior
+  - regenerate rendering issues
+  - button visibility overlap
+  - Prettier formatting conflicts
+- Practice:
+  - reusable utility architecture
+  - configurable rendering systems
+  - UI state synchronization
+  - conditional frontend behavior
+  - interaction lifecycle logic
+
+## Skills Learned
+- Reusable utility function architecture
+- Configurable rendering systems
+- Dynamic UI state reading
+- UI state synchronization concepts
+- Conditional rendering behavior
+- Progressive interaction UX
+- Context-aware button visibility
+- Session continuity interaction systems
+- Dropdown-driven application logic
+- Rendering abstraction patterns
+- Frontend scalability preparation
+- UX redundancy analysis
+- Dynamic configuration systems
+- Interactive application lifecycle behavior
+- Early frontend state management concepts
+
+## Reflection Summary
+Today the project evolved into a more interactive and configurable frontend application. I learned how reusable utility functions, configurable rendering systems, conditional UI behavior, and session continuity interactions create more scalable and professional frontend architecture.
+
+---
+
 # WEEK 2 — Application Logic Expansion
 
 Mission:
