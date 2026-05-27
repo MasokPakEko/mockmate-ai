@@ -1,34 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MockmatE AI</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
   <div class="container">
-
     <h1>MockmatE AI</h1>
     <h2>You've got a friend in ME.</h2>
 
-    <textarea
-      id="jobInput"
-      placeholder="Paste your job vacancy here."
-    ></textarea>
+    <textarea id="jobInput" placeholder="Paste your job vacancy here."></textarea>
     <p id="validationMessage"></p>
-    
-    <button onclick="generateQuestions()">
+    <select id="questionCount">
+      <option value="3">3 Questions</option>
+
+      <option value="5">5 Questions</option>
+
+      <option value="7">7 Questions</option>
+
+      <option value="10">10 Questions</option>
+    </select>
+    <button onclick="generateQuestions()" id="generateButton">
       Generate Questions
     </button>
-
+    <button onclick="generateQuestions()" id="regenerateButton">
+      Regenerate Questions
+    </button>
     <div id="questions"></div>
-
   </div>
 
   <script src="script.js"></script>
-
 </body>
+
 </html>

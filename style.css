@@ -23,6 +23,36 @@ textarea {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* =========================
+   QUESTION COUNT SELECTOR
+========================= */
+
+#questionCount {
+  /* Full width alignment */
+  width: 100%;
+
+  /* Internal spacing */
+  padding: 10px;
+
+  /* Cleaner text readability */
+  font-size: 16px;
+
+  /* Space below dropdown */
+  margin-bottom: 20px;
+
+  /* Modern rounded appearance */
+  border-radius: 8px;
+
+  /* Removes default browser styling harshness */
+  border: none;
+
+  /* Visual depth consistency */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  /* Cursor feedback */
+  cursor: pointer;
+}
+
 button {
   background-color: rgb(0, 0, 0);
   color: white;
@@ -65,6 +95,15 @@ button:active {
 }
 
 /* =========================
+   REGENERATE BUTTON
+========================= */
+
+#regenerateButton {
+  /* Hidden before first generation */
+  display: none;
+}
+
+/* =========================
    OUTPUT CARD
 ========================= */
 
@@ -87,7 +126,7 @@ button:active {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 
   /* Smooth entrance animation */
-  animation: fadeIn 0.4s ease;
+  animation: fadeIn 0.2s ease;
 }
 
 /* =========================

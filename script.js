@@ -1,3 +1,7 @@
+function getRandomQuestions(array, amount) {
+  return array.sort(() => 0.5 - Math.random()).slice(0, amount);
+}
+
 function generateQuestions() {
   // Vacancy Input
   const vacancy = document.getElementById("jobInput").value.toLowerCase();
@@ -294,16 +298,26 @@ function generateQuestions() {
       "Tell me about yourself.",
       "Why are you interested in this role?",
       "What are your strengths and weaknesses?",
+      "Describe a challenge you overcame.",
+      "How do you handle pressure at work?",
+      "What motivates you professionally?",
+      "Describe your ideal work environment.",
+      "How do you handle teamwork situations?",
+      "What achievement are you most proud of?",
+      "Where do you see yourself in the future?",
     ];
   }
 
   // Duplicate Filtering
   const uniqueQuestions = [...new Set(questions)];
 
+  const questionAmount = Number(document.getElementById("questionCount").value);
+
   // Randomized Question Selection
-  const randomizedQuestions = uniqueQuestions
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 3);
+  const randomizedQuestions = getRandomQuestions(
+    uniqueQuestions,
+    questionAmount,
+  );
 
   // Output Rendering
   let output = `
@@ -327,9 +341,13 @@ function generateQuestions() {
   });
 
   output += `</ul>`;
+
   // DOM Rendering
   const questionBox = document.getElementById("questions");
-
+  const regenerateButton = document.getElementById("regenerateButton");
   questionBox.innerHTML = output;
+  const generateButton = document.getElementById("generateButton");
   questionBox.style.display = "block";
+  regenerateButton.style.display = "block";
+  generateButton.style.display = "none";
 }
