@@ -48,3 +48,80 @@
 - Added modern component-style validation design
 - Improved frontend micro-interactions
 - Refined overall visual hierarchy
+
+---
+
+# Day 5 — Interactive State Systems & UX Evolution
+
+## Added
+
+### Reusable Question Randomizer Function
+- Created reusable utility function:
+  `getRandomQuestions(array, amount)`
+- Improved scalability and code readability
+- Introduced reusable frontend logic architecture
+
+### Dynamic Question Amount System
+- Added configurable interview question count
+- Connected dropdown UI to rendering logic
+- Users can now dynamically choose interview length
+
+### Dropdown-Controlled Rendering
+- Application now reads live UI values during every generation cycle
+- Improved dynamic state synchronization behavior
+- Prevented stale rendering states
+
+### Regenerate Question System
+- Added "Regenerate Questions" interaction flow
+- Users can reroll interview questions without refreshing the page
+- Introduced session continuity UX
+
+### Context-Aware Button Visibility
+- Regenerate button hidden before first generation
+- Generate button hidden after successful generation
+- Introduced progressive interaction UX
+- Implemented conditional UI visibility systems
+
+### General Question Database Expansion
+- Expanded fallback/general category from 3 to 10 questions
+- Improved content balance for unmatched vacancies
+- Enhanced interview realism and scalability
+
+---
+
+## Improved
+
+### Frontend Architecture
+- Improved separation between:
+  - utility logic
+  - rendering logic
+  - configuration systems
+- Began transitioning project structure toward scalable application architecture
+
+### UX & Interaction Design
+- Reduced interface redundancy
+- Improved interaction clarity
+- Introduced contextual UI behavior
+
+### Code Readability
+- Improved human-readable logic structure
+- Added clearer semantic naming conventions
+- Continued navigation-comment architecture
+
+---
+
+## Learned Concepts
+
+### Frontend Engineering
+- UI state synchronization
+- Conditional rendering concepts
+- Dynamic DOM state reading
+- Utility function abstraction
+- Configurable rendering systems
+- Progressive interaction UX
+
+### Product Thinking
+- Interaction redundancy detection
+- UX lifecycle behavior
+- Context-aware interfaces
+- Content architecture balancing
