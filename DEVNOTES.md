@@ -380,6 +380,78 @@ No project changes were made during this period.
 Resume Date:
 June 1, 2026
 
+## Day 6 Notes
+
+## Day 6
+
+Learned:
+
+- Application state management
+- Session state architecture
+- Historical state tracking
+- Current state tracking
+- State-aware frontend behavior
+- Memory-driven application logic
+- Array filtering systems
+- Session persistence concepts
+- Smart regeneration systems
+- Hybrid fallback architecture
+- State debugging workflows
+- Frontend scalability foundations
+- Data flow architecture
+- Context-aware generation logic
+
+---
+
+### Application State Evolution
+
+The project evolved from a stateless question generator into a state-aware interview session system.
+
+Main architecture improvements:
+
+- Interview session state object
+- Question history tracking
+- Latest generation tracking
+- Smart regeneration logic
+- Hybrid fallback system
+
+### Key Learning
+
+Frontend applications become significantly more powerful when they can remember previous user interactions.
+
+State management allows applications to make decisions based on what has already happened rather than only reacting to current inputs.
+
+### Important Discovery
+
+Application memory systems:
+
+- improve user experience
+- reduce repetitive outputs
+- enable intelligent behavior
+- support future feature expansion
+
+### Technical Lessons
+
+- State objects centralize application memory
+- Historical data and current data serve different purposes
+- Array filtering can create dynamic content pools
+- Fallback systems improve application reliability
+- Session tracking enables smarter application behavior
+- Memory-aware logic creates more realistic user experiences
+
+### Architecture Direction
+
+MockmatE AI now behaves more like an interview session platform instead of a simple question generator.
+
+The application has begun transitioning toward:
+
+- session intelligence
+- context-aware interactions
+- interview progression systems
+- scalable frontend state architecture
+
+---
+
 # Current Project Status
 
 ## Current Phase
