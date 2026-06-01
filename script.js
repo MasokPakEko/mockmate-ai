@@ -1,3 +1,17 @@
+// =========================
+// INTERVIEW SESSION STATE
+// =========================
+
+const interviewSession = {
+  started: false,
+
+  // Stores every generated question
+  history: [],
+
+  // Stores most recently displayed questions
+  lastQuestions: [],
+};
+
 function getRandomQuestions(array, amount) {
   return array.sort(() => 0.5 - Math.random()).slice(0, amount);
 }
@@ -18,6 +32,10 @@ function generateQuestions() {
 
   // Hide validation message if input exists
   validationMessage.style.display = "none";
+
+  // Interview officially starts
+  interviewSession.started = true;
+
   // Question Storage
   let questions = [];
   let detectedCategories = [];
@@ -310,14 +328,33 @@ function generateQuestions() {
 
   // Duplicate Filtering
   const uniqueQuestions = [...new Set(questions)];
-
   const questionAmount = Number(document.getElementById("questionCount").value);
+
+  // Remove recently shown questions
+  let availableQuestions = uniqueQuestions.filter(
+    (question) => !interviewSession.lastQuestions.includes(question),
+  );
+
+  // Fallback if filtered pool is too small
+  if (availableQuestions.length < questionAmount) {
+    availableQuestions = uniqueQuestions;
+  }
 
   // Randomized Question Selection
   const randomizedQuestions = getRandomQuestions(
-    uniqueQuestions,
+    availableQuestions,
     questionAmount,
   );
+
+  // Save generated questions into session history
+  interviewSession.history.push(...randomizedQuestions);
+
+  // Save latest generation
+  interviewSession.lastQuestions = [...randomizedQuestions];
+
+  // Debug: display session history in console
+  console.log("Interview History:", interviewSession.history);
+  console.log("Last Questions:", interviewSession.lastQuestions);
 
   // Output Rendering
   let output = `

@@ -5,6 +5,7 @@
 # PROJECT TARGET
 
 ## Official MVP Deadline
+
 Target:
 End of July 2026
 
@@ -12,6 +13,7 @@ Estimated Development Duration:
 8–12 Weeks
 
 Development Philosophy:
+
 - Understand first, optimize later
 - Consistency over intensity
 - Stable architecture before advanced features
@@ -24,6 +26,7 @@ Development Philosophy:
 MockmatE AI is an AI-assisted mock interview simulator designed to help job seekers practice interview scenarios based on real job vacancies.
 
 Core Goals:
+
 - Reduce interview anxiety
 - Help first-time applicants prepare confidently
 - Simulate realistic interview experiences
@@ -37,11 +40,13 @@ Core Goals:
 At the start of every new development session after a break:
 
 Provide:
+
 - index.html
 - style.css
 - script.js
 
 Purpose:
+
 - Review latest architecture state
 - Detect new modifications
 - Prevent outdated fixes
@@ -54,6 +59,7 @@ Purpose:
 Frontend Foundations & Beginner Application Logic
 
 Main Focus:
+
 - Learn frontend architecture
 - Understand HTML/CSS/JS relationships
 - Build stable UI systems
@@ -61,6 +67,7 @@ Main Focus:
 - Create maintainable project structure
 
 Rules:
+
 - Avoid rushing into frameworks
 - Avoid API integration too early
 - Understand every major line written
@@ -72,6 +79,7 @@ Rules:
 
 Mission:
 Master:
+
 - HTML structure
 - CSS styling
 - Beginner JavaScript
@@ -80,6 +88,7 @@ Master:
 
 Scope Limitation:
 DO NOT learn yet:
+
 - React
 - Backend systems
 - Databases
@@ -87,6 +96,7 @@ DO NOT learn yet:
 - AI integration
 
 Focus ONLY on:
+
 - Frontend fundamentals
 - UI logic
 - Responsive thinking
@@ -97,9 +107,11 @@ Focus ONLY on:
 # DAY 1 — May 23
 
 ## Daily Mission
+
 Environment Setup & Project Initialization
 
 ## Tasks Completed
+
 - Install VS Code
 - Install Git
 - Install GitHub Desktop
@@ -115,6 +127,7 @@ Environment Setup & Project Initialization
 - First commit & push
 
 ## Skills Learned
+
 - Local development setup
 - Repository workflow
 - Git basics
@@ -122,6 +135,7 @@ Environment Setup & Project Initialization
 - File structure organization
 
 ## Reflection Summary
+
 Today I successfully built my first frontend development environment and connected GitHub with VS Code to create a real project workflow.
 
 ---
@@ -129,9 +143,11 @@ Today I successfully built my first frontend development environment and connect
 # DAY 2 — May 24
 
 ## Daily Mission
+
 Frontend UI Foundations & Beginner Application Logic
 
 ## Tasks Completed
+
 - Create structured HTML layout
 - Implement container system
 - Connect external CSS
@@ -157,6 +173,7 @@ Frontend UI Foundations & Beginner Application Logic
   - UI state handling
 
 ## Skills Learned
+
 - Frontend architecture separation
 - Responsive UI design
 - DOM interaction
@@ -166,6 +183,7 @@ Frontend UI Foundations & Beginner Application Logic
 - Console debugging workflow
 
 ## Reflection Summary
+
 Today I learned how frontend applications combine HTML, CSS, and JavaScript into interactive systems. I also began understanding debugging, UI behavior, and structured application logic.
 
 ---
@@ -173,9 +191,11 @@ Today I learned how frontend applications combine HTML, CSS, and JavaScript into
 # DAY 3 — May 25
 
 ## Daily Mission
+
 Application Intelligence Expansion & Scalable Rendering Logic
 
 ## Tasks Completed
+
 - Expand interview category database
 - Add:
   - customer service
@@ -205,6 +225,7 @@ Application Intelligence Expansion & Scalable Rendering Logic
   - rendering architecture logic
 
 ## Skills Learned
+
 - Arrays
 - Array methods
 - Spread operator (...)
@@ -217,6 +238,7 @@ Application Intelligence Expansion & Scalable Rendering Logic
 - Frontend debugging workflow
 
 ## Reflection Summary
+
 Today the project evolved beyond simple rendering logic and began introducing scalable frontend architecture concepts. I learned how reusable rendering systems, duplicate filtering, and randomized question pipelines improve both application intelligence and maintainability.
 
 ---
@@ -224,9 +246,11 @@ Today the project evolved beyond simple rendering logic and began introducing sc
 # DAY 4 — May 26
 
 ## Daily Mission
+
 Frontend UX Polish & Interactive User Feedback Systems
 
 ## Tasks Completed
+
 - Improve textarea styling
 - Improve container spacing
 - Improve output card styling
@@ -260,6 +284,7 @@ Frontend UX Polish & Interactive User Feedback Systems
   - interactive UI behavior
 
 ## Skills Learned
+
 - CSS animation systems
 - Keyframes
 - Opacity transitions
@@ -273,6 +298,7 @@ Frontend UX Polish & Interactive User Feedback Systems
 - Frontend UX engineering concepts
 
 ## Reflection Summary
+
 Today the project evolved beyond functionality and began focusing on frontend user experience engineering. I learned how animation systems, validation feedback, spacing architecture, and interactive UI behavior improve usability, readability, and professional frontend presentation.
 
 ---
@@ -280,9 +306,11 @@ Today the project evolved beyond functionality and began focusing on frontend us
 # DAY 5 — May 27
 
 ## Daily Mission
+
 Interactive State Systems & Configurable Frontend Behavior
 
 ## Tasks Completed
+
 - Create reusable utility function:
   - getRandomQuestions()
 - Refactor randomized question selection logic
@@ -311,6 +339,7 @@ Interactive State Systems & Configurable Frontend Behavior
   - interaction lifecycle logic
 
 ## Skills Learned
+
 - Reusable utility function architecture
 - Configurable rendering systems
 - Dynamic UI state reading
@@ -328,9 +357,27 @@ Interactive State Systems & Configurable Frontend Behavior
 - Early frontend state management concepts
 
 ## Reflection Summary
+
 Today the project evolved into a more interactive and configurable frontend application. I learned how reusable utility functions, configurable rendering systems, conditional UI behavior, and session continuity interactions create more scalable and professional frontend architecture.
 
 ---
+
+## Schedule Adjustment
+
+Original Plan:
+
+- Day 6 planned for May 28, 2026
+
+Actual Start:
+
+- Day 6 resumed on June 1, 2026
+
+Reason:
+Internet connectivity interruption.
+
+Impact:
+Timeline shifted.
+Project scope unchanged.
 
 # WEEK 2 — Application Logic Expansion
 
@@ -338,6 +385,7 @@ Mission:
 Improve application intelligence and UX.
 
 Focus:
+
 - Multiple category matching
 - Randomized question generation
 - Input validation
@@ -353,6 +401,7 @@ Mission:
 Improve user experience and interface polish.
 
 Focus:
+
 - Question cards
 - Layout refinement
 - Responsive mobile behavior
@@ -368,6 +417,7 @@ Mission:
 Transform question generator into interview simulator.
 
 Focus:
+
 - Timer system
 - Answer fields
 - Interview modes
@@ -383,6 +433,7 @@ Mission:
 Create more adaptive interview logic.
 
 Focus:
+
 - Multi-category vacancies
 - Smarter question selection
 - Skill extraction
@@ -397,10 +448,12 @@ Mission:
 Introduce real AI-assisted generation.
 
 Possible Integrations:
+
 - OpenAI API
 - Gemini API
 
 Features:
+
 - AI-generated questions
 - Vacancy summarization
 - Skill gap analysis
@@ -414,6 +467,7 @@ Mission:
 Prepare publishable MVP.
 
 Focus:
+
 - Bug fixing
 - UI polish
 - Mobile responsiveness
