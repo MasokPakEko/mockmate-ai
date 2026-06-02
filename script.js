@@ -10,10 +10,13 @@ const interviewSession = {
 
   // Stores most recently displayed questions
   lastQuestions: [],
+
+  // Counts interview generations
+  generationCount: 0,
 };
 
 function getRandomQuestions(array, amount) {
-  return array.sort(() => 0.5 - Math.random()).slice(0, amount);
+  return [...array].sort(() => 0.5 - Math.random()).slice(0, amount);
 }
 
 function generateQuestions() {
@@ -35,6 +38,9 @@ function generateQuestions() {
 
   // Interview officially starts
   interviewSession.started = true;
+
+  // Track interview generations
+  interviewSession.generationCount++;
 
   // Question Storage
   let questions = [];
@@ -328,6 +334,7 @@ function generateQuestions() {
 
   // Duplicate Filtering
   const uniqueQuestions = [...new Set(questions)];
+
   const questionAmount = Number(document.getElementById("questionCount").value);
 
   // Remove recently shown questions
@@ -352,9 +359,19 @@ function generateQuestions() {
   // Save latest generation
   interviewSession.lastQuestions = [...randomizedQuestions];
 
+  // Count unique questions generated during session
+  const uniqueQuestionCount = new Set(interviewSession.history).size;
+
+  // Calculate question diversity percentage
+  const diversityPercentage = Math.round(
+    (uniqueQuestionCount / interviewSession.history.length) * 100,
+  );
+
   // Debug: display session history in console
   console.log("Interview History:", interviewSession.history);
   console.log("Last Questions:", interviewSession.lastQuestions);
+  console.log("Generation Count:", interviewSession.generationCount);
+  console.log("Question Diversity:", diversityPercentage + "%");
 
   // Output Rendering
   let output = `
@@ -363,6 +380,17 @@ function generateQuestions() {
   <p>
     <strong>Detected Category:</strong>
     ${detectedCategories.join(", ")}
+  </p>
+
+  <p>
+    <strong>Session Statistics:</strong>
+    Generations: ${interviewSession.generationCount}
+    |
+    Total Generated: ${interviewSession.history.length}
+    |
+    Unique Questions: ${uniqueQuestionCount}
+    |
+    Diversity: ${diversityPercentage}%
   </p>
 
   <ul>
